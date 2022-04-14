@@ -1,0 +1,166 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 1080px;
+}
+body {
+  background-image: url(./Images/Wallpaper-The-Sun-Music-The-Plane-Background-Neon-805-scaled.jpg);
+  background-size: contain;
+  color: rgb(191, 244, 0);
+}
+/*Main grid 1*/
+main {
+  display: grid;
+  grid-template-columns: 2fr auto;
+  grid-template-rows: auto;
+  grid-template-areas: "board content";
+  gap: 40px;
+}
+h1 {
+  text-align: center;
+  margin: 40px;
+  font-size: 69px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  animation: glow1 2s ease-in-out 0.5s infinite alternate;
+}
+@keyframes glow1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 50px #ff007f, 0 0 30px #fff;
+  }
+  to {
+    text-shadow: 0 0 60px #ff0080, 0 0 20px #fff, 0 0 40px #ef1c85;
+  }
+}
+h1 span {
+  font-size: 150px;
+  font-style: italic;
+}
+
+/*Grid 2: Game board*/
+#board {
+  display: grid;
+  grid-template-columns: repeat(7, 80px);
+  grid-template-rows: repeat(6, 80px);
+  justify-content: flex-start;
+  margin-left: 15%;
+  align-content: center;
+  float: inline-start;
+  width: fit-content;
+  color: rgba(163, 163, 19, 0.612);
+  border-radius: 30px;
+  box-shadow: 20px 10px;
+  grid-column-start: 1;
+  grid-area: board;
+}
+.box {
+  border: 10px solid blue;
+  border-radius: 20%;
+  margin: 0.5px;
+  font-size: 0px;
+}
+.displays {
+  text-align: center;
+  grid-column-start: 2;
+  grid-area: content;
+}
+#player1,
+#player2 {
+  padding: 50px 20px 20px 20px;
+  margin: 10px 100px 10px 10px;
+  border-radius: 50%;
+  width: min-content;
+  font-size: 40px;
+}
+#player1 {
+  border: 10px solid rgb(255, 0, 0);
+  outline: 5px solid rgb(164, 0, 0);
+  background-color: rgb(231, 143, 143);
+  color: rgb(169, 0, 0);
+}
+#player2 {
+  border: 10px solid rgb(2, 169, 2);
+  outline: 5px solid rgb(0, 118, 0);
+  background-color: lightgreen;
+  color: green;
+}
+.indi3 {
+  animation-name: indi3;
+  animation-duration: 1200ms;
+  animation-iteration-count: 5;
+}
+.indi4 {
+  animation-name: indi4;
+  animation-duration: 1200ms;
+  animation-iteration-count: 5;
+}
+@keyframes indi3 {
+  from {
+    background-color:rgb(238, 133, 133);
+  }
+  to {
+    background-color: rgb(174, 56, 56);
+  }
+}
+@keyframes indi4 {
+  from {
+    background-color: lightgreen;
+  }
+  to {
+    background-color: rgb(0, 54, 0);
+  }
+}
+.buttons {
+  align-items: center;
+  justify-items: center;
+  margin-right: 30%;
+  padding: 10px;
+}
+.button {
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 4px 4px gray;
+}
+#Status {
+  border: 5px outset brown;
+  width: fit-content;
+  max-width: 260px;
+  max-height: 100px;
+  border-radius: 10%;
+  flex-wrap: wrap;
+  animation: glow2 1.5s linear 0.5s infinite alternate;
+}
+
+@keyframes glow2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 50px #ff007f, 0 0 30px #fff;
+  }
+  to {
+    text-shadow: 0 0 60px #ff0080, 0 0 20px #fff, 0 0 40px #ef1c85;
+  }
+}
+.base {
+  position: absolute;
+  margin: 15px 0px 30px 65px;
+  height: 0px;
+  width: 670px;
+  border-bottom: 50px solid rgb(3, 3, 193);
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 40px;
+  box-shadow: 10px 5px rgb(56, 1, 56);
+}
+
+.red {
+  background-image: url(./Images/NCage2-trans.png);
+  background-size: contain;
+}
+
+.green {
+  background-image: url(./Images/con_air-Trans.png);
+  background-size: contain;
+}
+#p1,
+#p2 {
+  font-size: 27px;
+}
