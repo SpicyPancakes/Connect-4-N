@@ -8,6 +8,7 @@ const playerOneScore = document.querySelector("#p1");
 const playerTwoEl = document.querySelector("#player2");
 const playerTwoScore = document.querySelector("#p2");
 const cellsEl = document.querySelectorAll(".box");
+const bodyEl = document.querySelector("#body");
 
 let playerOneScoreNum = 0;
 let playerTwoScoreNum = 0;
@@ -23,8 +24,10 @@ let quoteList = [
   "Define irony. Bunch of idiots dancing on a plane to a song made famous by a band that died in a plane crash.",
   "Make a move and the bunny gets it.",
 ];
-let cage = new Audio("Audio/con-cage.wav");
-let cage2 = new Audio("Audio/con-bunny.wav");
+let cage = new Audio("Audio/yes-daddy.mp3");
+let cage2 = new Audio("Audio/SOund-2.mp3");
+let cage3 = new Audio("Audio/short-cute-moan.mp3")
+let cage4 = new Audio("Audio/moan13.mp3");
 
 // Winning combinations
 const winningCombos = [
@@ -114,12 +117,14 @@ function playGame() {
       cellsEl[i].classList.add("taken");
       cellsEl[i].classList.add("red");
       cellsEl[i].innerHTML = 1;
+      cage3.play();
       turnTracker();
     } else if (turn === -1) {
       cellsEl[i].classList.remove("empty");
       cellsEl[i].classList.add("taken");
       cellsEl[i].classList.add("green");
       cellsEl[i].innerHTML = -1;
+      cage4.play();
       turnTracker();
     }
   }
@@ -145,7 +150,10 @@ function playGame() {
   checkBoard();
   turnCounter = -1;
   turnTracker();
+  document.body.style.background = "url('./Images/3.jpeg')"
+  document.body.style.backgroundSize = "900px"
   playEl.removeEventListener("click", playGame);
+
 }
 
 // Turn Tracker, adds animation for turn indicatior as Indi

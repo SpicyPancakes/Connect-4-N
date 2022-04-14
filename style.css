@@ -5,9 +5,9 @@
   max-width: 1080px;
 }
 body {
-  background-image: url(./Images/Wallpaper-The-Sun-Music-The-Plane-Background-Neon-805-scaled.jpg);
+  background-image: url(./Images/butfirstpray_1920_1080.jpeg);
   background-size: contain;
-  color: rgb(191, 244, 0);
+  color: rgb(222, 43, 73);
 }
 /*Main grid 1*/
 main {
@@ -54,7 +54,7 @@ h1 span {
   grid-area: board;
 }
 .box {
-  border: 10px solid blue;
+  border: 10px solid rgb(218, 90, 111);
   border-radius: 20%;
   margin: 0.5px;
   font-size: 0px;
@@ -144,7 +144,7 @@ h1 span {
   margin: 15px 0px 30px 65px;
   height: 0px;
   width: 670px;
-  border-bottom: 50px solid rgb(3, 3, 193);
+  border-bottom: 50px solid rgb(192, 26, 54);
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-radius: 40px;
@@ -152,12 +152,12 @@ h1 span {
 }
 
 .red {
-  background-image: url(./Images/NCage2-trans.png);
+  background-image: url(./Images/2s.png);
   background-size: contain;
 }
 
 .green {
-  background-image: url(./Images/con_air-Trans.png);
+  background-image: url(./Images/4ss.png);
   background-size: contain;
 }
 #p1,
